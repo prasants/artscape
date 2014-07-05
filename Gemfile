@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'devise', '~> 3.1.0.rc2'
 
+gem 'shelly-dependencies'
+
 group :development, :test do 
 # Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
@@ -31,6 +33,7 @@ end
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
+	
 end 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
