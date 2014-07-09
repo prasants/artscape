@@ -1,12 +1,14 @@
 <%= render 'pages/home' unless user_signed_in? %>
+
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
     <div class="box panel panel-default">
       <%= link_to image_tag(pin.image.url(:medium)), pin %>
       <div class="panel-body">
-        <%= pin.description %><br/>
-        <p><strong><%= @pin.user.name if @pin.user %></strong></p>
-        <% if pin.user == current_user %>
+        <p><%= pin.description %></p>
+        <p><strong><%= pin.user.name if pin.user %></strong></p>
+        
+        <% if current_user && pin.user == current_user %>
           <div class="actions">
             <%= link_to edit_pin_path(pin) do %>
               <span class="glyphicon glyphicon-edit"></span>
@@ -18,10 +20,12 @@
             <% end %>
           </div>
         <% end %>
+        
       </div>
     </div>
   <% end %>
 </div>
+
 <div class="center">
-   <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
 </div>
