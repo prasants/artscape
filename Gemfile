@@ -23,7 +23,7 @@ gem 'jquery-turbolinks'
 gem 'masonry-rails', '~> 0.2.0'
 
 gem 'bootstrap-sass'
-gem 'devise', '~> 3.2.4'
+gem 'devise', '~> 3.1.0.rc2'
 
 gem 'shelly-dependencies'
 
@@ -34,8 +34,6 @@ gem 'aws-sdk', '~> 1.20.0'
 gem 'will_paginate', '~> 3.0.5'
 
 gem 'will_paginate-bootstrap'
-
-gem 'activeadmin', github: 'gregbell/active_admin'
 
 group :development, :test do 
 # Use sqlite3 as the database for Active Record
